@@ -1,5 +1,5 @@
 
-# module::ImageWriterPsd  [![Status](https://github.com/Wandalen/wImageWriterPsd/workflows/publish/badge.svg)](https://github.com/Wandalen/wImageWriterPsd/actions?query=workflow%3Apublish) [![experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](https://github.com/emersion/stability-badges#experimental)
+# module::ImageWriterPsd  [![status](https://github.com/Wandalen/wImageWriterPsd/workflows/publish/badge.svg)](https://github.com/Wandalen/wImageWriterPsd/actions?query=workflow%3Apublish) [![experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](https://github.com/emersion/stability-badges#experimental)
 
 ___
 
