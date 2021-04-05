@@ -2,15 +2,12 @@ format: outwillfile-2.0
 root:
   - wImageWriterPsd.out
 consistency:
-  wImageWriterPsd.out.will.yml: &ref_0
-    hash: 08374f259d5f5c35199581f89ff947c7
-    size: 37369
-  ../.ex.will.yml: &ref_1
+  ../.ex.will.yml: &ref_0
     hash: c8359f95c98a712cd02cd6f4349785a4
     size: 1703
-  ../.im.will.yml: &ref_2
-    hash: 0c0c686e146cb3be13df8a1693af6cd3
-    size: 4740
+  ../.im.will.yml: &ref_1
+    hash: 246713d9e58b5119ebed8ec8d896e6ef
+    size: 4722
 module:
   wImageWriterPsd.out:
     about:
@@ -19,19 +16,19 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters:
+      interpreters: &ref_2
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
+      keywords: &ref_3
         - tools
         - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wimagewriterpsd
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -682,24 +679,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          filePath: 'reflector::exported.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          filePath: 'reflector::exported.files.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -788,9 +767,8 @@ module:
           content: proto
           export: 1
     consistency:
-      wImageWriterPsd.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wImageWriterPsd
@@ -798,21 +776,13 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters:
-        - njs >= 10.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - tools
-        - wTools
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@01.school>
+      contributors: *ref_4
       npm.name: wimagewriterpsd
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
+      npm.scripts: *ref_5
     path:
       module.willfiles:
         criterion:
@@ -920,8 +890,8 @@ module:
         path: '{path::out.*=}/source/Index.s'
       npm.proto.entry:
         path:
-          - proto/wtools/Tools.s
-          - proto/node_modules/wimagewriterpsd
+          - ../wImageWriterPsd/proto/wtools/Tools.s
+          - ../wImageWriterPsd/proto/node_modules/wimagewriterpsd
     submodule:
       wTools:
         path: 'npm:///wTools'
@@ -1468,6 +1438,5 @@ module:
         hash: c8359f95c98a712cd02cd6f4349785a4
         size: 1703
       ../.im.will.yml:
-        hash: 0c0c686e146cb3be13df8a1693af6cd3
-        size: 4740
-      wImageWriterPsd.out.will.yml: *ref_0
+        hash: 246713d9e58b5119ebed8ec8d896e6ef
+        size: 4722
