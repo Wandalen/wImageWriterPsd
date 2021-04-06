@@ -63,7 +63,7 @@ path:
       raw: compiled
       content: prime
   npm.proto.entry:
-    - ../wImageWriterPsd/proto/wtools/Tools.s
+    - proto/node_modules/Tools
     - ../wImageWriterPsd/proto/node_modules/wimagewriterpsd
 reflector:
   reflect.proto:
