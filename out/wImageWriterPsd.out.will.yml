@@ -6,8 +6,8 @@ consistency:
     hash: c8359f95c98a712cd02cd6f4349785a4
     size: 1703
   ../.im.will.yml: &ref_1
-    hash: 246713d9e58b5119ebed8ec8d896e6ef
-    size: 4722
+    hash: 5ea6de53c453c2c2c974d006703fd404
+    size: 4707
 module:
   wImageWriterPsd.out:
     about:
@@ -138,7 +138,7 @@ module:
         path: '{path::out.*=}/source/Index.s'
       npm.proto.entry:
         path:
-          - ../proto/wtools/Tools.s
+          - ../proto/node_modules/Tools
           - ../proto/node_modules/wimagewriterpsd
       exported.dir.proto.export:
         criterion:
@@ -155,9 +155,9 @@ module:
           - ../proto
           - ../proto/Integration.test.ss
           - ../proto/node_modules
+          - ../proto/node_modules/Tools
           - ../proto/node_modules/wimagewriterpsd
           - ../proto/wtools
-          - ../proto/wtools/Tools.s
           - ../proto/wtools/abase
           - ../proto/wtools/amid
           - ../proto/wtools/atop
@@ -890,7 +890,7 @@ module:
         path: '{path::out.*=}/source/Index.s'
       npm.proto.entry:
         path:
-          - ../wImageWriterPsd/proto/wtools/Tools.s
+          - proto/node_modules/Tools
           - ../wImageWriterPsd/proto/node_modules/wimagewriterpsd
     submodule:
       wTools:
@@ -1438,5 +1438,5 @@ module:
         hash: c8359f95c98a712cd02cd6f4349785a4
         size: 1703
       ../.im.will.yml:
-        hash: 246713d9e58b5119ebed8ec8d896e6ef
-        size: 4722
+        hash: 5ea6de53c453c2c2c974d006703fd404
+        size: 4707
